@@ -300,9 +300,9 @@ table input:checked + label + .modal:before {
   width: 100%;
 }
 
-.due_date dd {
+.due_date dd:not(.slash) {
   width: 116px;
-  margin-right: 5px;
+  margin-right: 10px;
   margin-left: 5px;
 }
 
@@ -322,7 +322,7 @@ table input:checked + label + .modal:before {
   vertical-align: top;
   resize: none;
   height: 144px;
-  width: 395px;
+  width: 396px;
   border-color: #cccccc;
 }
 
