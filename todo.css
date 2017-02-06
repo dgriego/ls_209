@@ -1,0 +1,357 @@
+body {
+  font: 300 16px Helvetica, Arial, sans-serif;
+  color: #060606;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+  line-height: 0;
+}
+
+.clearfix:after,
+.clearfix {
+  clear: both;
+}
+
+h3 {
+  letter-spacing: 1px;
+  font-weight: 300;
+}
+
+a, li, label {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+
+/* hamburger functionality */
+
+#hb {
+  display: none;
+}
+
+.hamburger {
+  position: absolute;
+  display: none;
+  margin: 0 0 0 11px;
+  padding: 20px 0 0 355px;
+}
+
+#hb:checked + label + .sidebar {
+  display: block;
+}
+
+#hb:checked + label + .sidebar + main,
+#hb:checked + label {
+  padding-left: 355px;
+}
+
+
+/* Sidebar styles */
+
+.sidebar {
+  width: 335px;
+  position: fixed;
+  height: 100vh;
+  z-index: 1000;
+  background: #464f77;
+  color: #b2b5c3;
+  padding: 71px 0 0 0;
+  box-sizing: border-box;
+}
+
+.sidebar ul + ul {
+  margin-top: 65px;
+}
+
+.sidebar h3 {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.sidebar a {
+  display: block;
+  position: relative;
+}
+
+.sidebar a img {
+  position: absolute;
+  left: -35px;
+  top: -3px;
+}
+
+.sidebar a > *:not(img){
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.sidebar li {
+  padding: 14px 32px 14px 138px;
+}
+
+.sidebar li:first-of-type {
+  padding-top: 4px;
+}
+
+.sidebar li + li:hover, .selected_list {
+  background: #383f5f;
+  color: #ffffff;
+}
+
+.sidebar li + li:hover .count,
+.sidebar li + li:hover .total_count,
+.selected_list .count,
+main .count {
+  background: #148fd5;
+}
+
+.date, .count,
+.total_count {
+  letter-spacing: 1.5px;
+}
+
+.total_count, .count {
+  font-size: 14px;
+  border-radius: 10px;
+  text-align: center;
+  background: #6b7292;
+  float: right;
+  box-sizing: border-box;
+}
+
+.count {
+  width: 20px;
+  height: 20px;
+  padding: 2px 1px 2px 3px;
+  margin-top: -1px;
+}
+
+.total_count {
+  margin-top: 2px;
+  width: 24px;
+  height: 18px;
+  padding: 1.4px 2px 1.4px 1.4px;
+}
+
+
+/* Main Content styles */
+
+main {
+  padding: 74px 30px 0 355px;
+  max-width: 747px;
+  min-width: 200px;
+}
+
+main h3 {
+  font-size: 21px;
+  float: left;
+  margin: 0 0 0 11px;
+}
+
+main h3 + div {
+  float: left;
+}
+
+main .count {
+  float: none;
+  display: inline-block;
+  color: #ffffff;
+  margin: 2px 0 0 20px;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+table a, table input {
+  cursor: pointer;
+}
+
+table td {
+  padding: 16px 0 16px 11px;
+}
+
+table tr:first-of-type td a,
+table td input[id*="item"] {
+  margin-right: 13px;
+}
+
+table tr:first-of-type td {
+  color: #148fd5;
+  cursor: pointer;
+}
+
+table tr td:first-of-type {
+  padding: 0 0 0 11px;
+}
+
+table tr td:last-of-type {
+  text-align: right;
+}
+
+table tr {
+  border-top: 1px solid #e7e7e7;
+}
+
+table tr:first-of-type {
+  border-top: none;
+}
+
+table input + label:hover {
+  color: #148fd5;
+}
+
+table input[type="checkbox"] {
+  visibility: hidden;
+}
+
+table label {
+  position: relative;
+}
+
+table label[for*="item"]:before {
+  cursor: pointer;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 1px solid #9c9c9c;
+  position: absolute;
+  left: -29px;
+  top: 1px;
+}
+
+table input:checked + label:before {
+  border-color: #b3b3b3;
+  background: url('check.png') 0 0 no-repeat;
+}
+
+table input:checked + label {
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+
+.modal_form {
+  display: none;
+}
+
+table input:checked + label + .modal .modal_form {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 107px;
+  left: 50%;
+  background: #ffffff;
+  margin-left: -287.5px;
+  padding: 31px 37px;
+}
+
+table input:checked + label + .modal:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(204, 204, 204, .2);
+  z-index: 1;
+}
+
+.modal_form dl {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.modal_form dt,
+.modal_form dd {
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.modal_form dt {
+  width: 110px;
+}
+
+.modal_form input,
+.modal_form textarea {
+  padding: 8px 9px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-weight: 200;
+}
+
+.title dd {
+  width: 396px;
+}
+
+.title dd input {
+  width: 100%;
+}
+
+.due_date dd {
+  width: 116px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.due_date dd:first-of-type {
+  margin-left: 0;
+}
+
+.due_date dd:last-of-type {
+  margin-right: 0;
+}
+
+.due_date input {
+  width: 100%;
+}
+
+.description textarea {
+  vertical-align: top;
+  resize: none;
+  height: 144px;
+  width: 395px;
+  border-color: #cccccc;
+}
+
+.description dt {
+  vertical-align: top;
+  padding-top: 10px;
+}
+
+.modal_form .buttons {
+  padding-left: 114px;
+}
+
+.modal_form .submit {
+  margin-right: 15px;
+}
+
+input[type="submit"] {
+  background: #148fd5;
+  color: #ffffff;
+  border: 0;
+  border-radius: 5px;
+  width: 185px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor:pointer;
+  opacity: 1;
+  background: url('number_arrows.png') no-repeat 100%;  
+  width: 15px;
+  height: 20px;
+}

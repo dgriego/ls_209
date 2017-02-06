@@ -1,0 +1,13 @@
+@media (max-width: 700px) {
+  .sidebar {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #hb + label, main {
+    padding-left: 20px;
+  }
+}

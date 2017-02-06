@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="whitespace-reset.css">
+  <link rel="stylesheet" type="text/css" href="todo.css">
+  <link rel="stylesheet" type="text/css" href="responsive.css">
+</head>
+<body>
+  <input type="checkbox" id="hb">
+  <label class="hamburger" for="hb"><img src="hamburger_icon.png"></label>
+
+  <div class="sidebar">
+    <ul>
+      <li>
+        <a href="#">
+          <img src="list_icon.png">
+          <h3>All Todos</h3>
+          <div class="total_count">18</div>
+        </a>
+      </li>
+      <li class="selected_list">
+        <a href="#">
+          <div class="date">02/16</div>
+          <div class="count">8</div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date">03/16</div>
+          <div class="count">2</div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date">04/16</div>
+          <div class="count">1</div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date">05/16</div>
+          <div class="count">1</div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date">06/16</div>
+          <div class="count">6</div>
+        </a>
+      </li>
+    </ul>
+
+    <ul>
+      <li>
+        <a href="#">
+          <img src="completed_icon.png">
+          <h3>Completed</h3>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date completed">02/16</div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date completed">03/16</div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date completed">04/16</div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date completed">05/16</div>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <div class="date completed">06/16</div>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="clearfix">
+      <h3>02/16</h3><div class="count">8</div>
+    </div>
+
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <a href="">
+              <img src="add_icon.png">
+            </a>
+            Add new todo
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item1">
+            <label for="item1">Item 1</label>
+            <div class="modal">
+              <div class="modal_form">
+                <form action="" method="post">
+                  <dl class="title">
+                    <dt><label for="name">Title</label></dt>
+                    <dd><input type="text" id="name" value="Item 2"></dd>
+                  </dl>
+
+                  <dl class="due_date">
+                    <dt><label for="day">Due Date</label></dt>
+                    <dd><input type="number" id="day" min="1" max="32" value="16"></dd> /
+                    <dd><input type="number" id="month" max="12" placeholder="Month"></dd> / 
+                    <dd><input type="number" id="year" max="9999" placeholder="Year"></dd>
+                  </dl>
+
+                  <dl class="description">
+                    <dt><label for="description">Description</label></dt>
+                    <dd><textarea id="description" placeholder="Description"></textarea></dd>
+                  </dl>
+
+                  <div class="buttons">
+                    <input class="submit" type="submit" value="Save">
+                    <input class="button complete" type="submit" value="Mark As Complete">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item2">
+            <label for="item2">Item 2</label>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item3">
+            <label for="item3">Item 3</label>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item4">
+            <label for="item4">Item 4</label>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item5">
+            <label for="item5">Item 5</label>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item6">
+            <label for="item6">Item 6</label>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item7">
+            <label for="item7">Item 7</label>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item8">
+            <label for="item8">Item 8</label>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" id="item9">
+            <label for="item9">Item 9</label>
+          </td>
+          <td><a href=""><img src="trash_icon.png"></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>
