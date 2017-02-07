@@ -149,7 +149,7 @@ main .count {
 main {
   padding: 74px 30px 0 355px;
   max-width: 747px;
-  min-width: 200px;
+  min-width: 350px;
 }
 
 main h3 {
@@ -169,60 +169,60 @@ main .count {
   margin: 2px 0 0 20px;
 }
 
-table {
+.todos_list {
   width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
   margin-top: 25px;
 }
 
-table a, table input {
-  cursor: pointer;
-}
-
-table td {
-  padding: 16px 0 16px 11px;
-}
-
-table tr:first-of-type td a,
-table td input[id*="item"] {
-  margin-right: 13px;
-}
-
-table tr:first-of-type td {
+.todos_list dl dt label:hover,
+.todos_list dl:first-of-type {
   color: #148fd5;
-  cursor: pointer;
 }
 
-table tr td:first-of-type {
-  padding: 0 0 0 11px;
+.modal_form dl dt label:hover {
+  color: #000000;
 }
 
-table tr td:last-of-type {
+.todos_list dt,
+.todos_list dd {
+  padding: 16px 0 16px 11px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 49%;
+}
+
+.todos_list dd {
   text-align: right;
 }
 
-table tr {
+.todos_list input,
+.todos_list label,
+.todos_list a {
+  cursor: pointer;
+}
+
+.todos_list dl {
   border-top: 1px solid #e7e7e7;
 }
 
-table tr:first-of-type {
+.todos_list dl:first-of-type {
   border-top: none;
 }
 
-table input + label:hover {
-  color: #148fd5;
+.todos_list dl:first-of-type a,
+.todos_list dl input[id*="item"] {
+  margin-right: 13px;
 }
 
-table input[type="checkbox"] {
+.todos_list input[type="checkbox"] {
   visibility: hidden;
 }
 
-table label {
+.todos_list label {
   position: relative;
 }
 
-table label[for*="item"]:before {
+.todos_list label[for*="item"]:before {
   cursor: pointer;
   content: "";
   width: 12px;
@@ -233,21 +233,17 @@ table label[for*="item"]:before {
   top: 1px;
 }
 
-table input:checked + label:before {
+.todos_list input:checked + label:before {
   border-color: #b3b3b3;
   background: url('check.png') 0 0 no-repeat;
 }
 
-table input:checked + label {
+.todos_list input:checked + label {
   text-decoration: line-through;
   color: #b3b3b3;
 }
 
-.modal_form {
-  display: none;
-}
-
-table input:checked + label + .modal .modal_form {
+.todos_list input:checked + label + .modal .modal_form {
   display: block;
   position: absolute;
   z-index: 2;
@@ -258,26 +254,33 @@ table input:checked + label + .modal .modal_form {
   padding: 31px 37px;
 }
 
-table input:checked + label + .modal:before {
+.todos_list input:checked + label + .modal:before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(204, 204, 204, .2);
+  background: rgba(204, 204, 204, .7);
   z-index: 1;
 }
+
+
+/* Modal Styles */
 
 .modal_form dl {
   display: block;
   margin-bottom: 24px;
+  border: none;
 }
 
 .modal_form dt,
 .modal_form dd {
+  color: #000000;
   display: inline-block;
   box-sizing: border-box;
+  padding: 0;
+  width: auto;
 }
 
 .modal_form dt {
@@ -314,8 +317,18 @@ table input:checked + label + .modal:before {
   margin-right: 0;
 }
 
-.due_date input {
+.due_date select {
   width: 100%;
+  -webkit-appearance: none;
+  border-radius: 0;
+  border-color: #cccccc;
+  padding: 8px 9px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-weight: 200;
+  width: 100%;
+  height: 39px;
+  background: url('number_arrows.png') no-repeat 95% #ffffff;
 }
 
 .description textarea {
@@ -329,6 +342,10 @@ table input:checked + label + .modal:before {
 .description dt {
   vertical-align: top;
   padding-top: 10px;
+}
+
+.modal_form {
+  display: none;
 }
 
 .modal_form .buttons {
@@ -347,7 +364,12 @@ input[type="submit"] {
   width: 185px;
 }
 
-input[type=number]::-webkit-inner-spin-button {
+/* keeping this here in case
+   I want to use a number input
+   instead of a dropdown */
+
+/* 
+  select::-webkit-inner-spin-button {
   -webkit-appearance: none;
   cursor:pointer;
   opacity: 1;
@@ -355,3 +377,4 @@ input[type=number]::-webkit-inner-spin-button {
   width: 15px;
   height: 20px;
 }
+*/

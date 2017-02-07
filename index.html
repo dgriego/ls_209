@@ -4,48 +4,48 @@
   <title>Todo</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="whitespace-reset.css">
-  <link rel="stylesheet" type="text/css" href="todo.css">
-  <link rel="stylesheet" type="text/css" href="responsive.css">
+  <link rel="stylesheet" type="text/css" href="styles/whitespace-reset.css">
+  <link rel="stylesheet" type="text/css" href="styles/todo.css">
+  <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 </head>
 <body>
   <input type="checkbox" id="hb">
-  <label class="hamburger" for="hb"><img alt="" src="hamburger_icon.png"></label>
+  <label class="hamburger" for="hb"><img alt="" src="images/hamburger_icon.png"></label>
 
   <div class="sidebar">
     <ul>
       <li>
         <a href="#">
-          <img alt="" src="list_icon.png">
+          <img alt="" src="images/list_icon.png">
           <h3>All Todos</h3>
           <div class="total_count">18</div>
         </a>
-      </li>
-      <li class="selected_list">
+      </li><!--
+      --><li class="selected_list">
         <a href="#">
           <div class="date">02/16</div>
           <div class="count">8</div>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date">03/16</div>
           <div class="count">2</div>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date">04/16</div>
           <div class="count">1</div>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date">05/16</div>
           <div class="count">1</div>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date">06/16</div>
           <div class="count">6</div>
@@ -56,31 +56,31 @@
     <ul>
       <li>
         <a href="#">
-          <img alt="" src="completed_icon.png">
+          <img alt="" src="images/completed_icon.png">
           <h3>Completed</h3>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date completed">02/16</div>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date completed">03/16</div>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date completed">04/16</div>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date completed">05/16</div>
         </a>
-      </li>
-      <li>
+      </li><!--
+      --><li>
         <a href="#">
           <div class="date completed">06/16</div>
         </a>
@@ -93,109 +93,173 @@
       <h3>02/16</h3><div class="count">8</div>
     </div>
 
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <a href="">
-              <img alt="" src="add_icon.png">
-            </a>
-            Add new todo
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item1">
-            <label for="item1">Item 1</label>
-            <div class="modal">
-              <div class="modal_form">
-                <form method="post">
-                  <dl class="title">
-                    <dt><label for="name">Title</label></dt>
-                    <dd><input type="text" id="name" value="Item 2"></dd>
-                  </dl>
+    <div class="todos_list">
+      <dl>
+        <dt>
+          <a href="">
+            <img alt="" src="images/add_icon.png">
+          </a>
+          Add new todo
+        </dt>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item1">
+          <label for="item1">Item 1</label>
+          <div class="modal">
+            <div class="modal_form">
+              <form method="post">
+                <dl class="title">
+                  <dt><label for="name">Title</label></dt>
+                  <dd><input type="text" id="name" value="Item 2"></dd>
+                </dl>
 
-                  <dl class="due_date">
-                    <dt><label for="day">Due Date</label></dt>
-                    <dd><input type="number" id="day" min="1" max="32" value="16"></dd><dd class="slash">/</dd>
-                    <dd><input type="number" id="month" max="12" placeholder="Month"></dd><dd class="slash">/</dd>
-                    <dd><input type="number" id="year" max="9999" placeholder="Year"></dd>
-                  </dl>
+                <dl class="due_date">
+                  <dt><label for="day">Due Date</label></dt>
+                  <dd>
+                    <!-- <input type="number" id="day" min="1" max="32" value="16"> -->
+                    <select id="day">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                  </dd><dd class="slash">/</dd>
+                  <dd>
+                    <select id="month">
+                      <option value="">Month</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                  </dd><dd class="slash">/</dd>
+                  <dd>
+                    <select id="year">
+                      <option value="">Year</option>
+                      <option value="2017">2017</option>
+                      <option value="2018">2018</option>
+                      <option value="2019">2019</option>
+                      <option value="2020">2020</option>
+                      <option value="2022">2021</option>
+                      <option value="2023">2023</option>
+                      <option value="2024">2024</option>
+                      <option value="2025">2025</option>
+                      <option value="2026">2026</option>
+                      <option value="2027">2027</option>
+                      <option value="2028">2028</option>
+                      <option value="2029">2029</option>
+                    </select>
+                  </dd>
+                </dl>
 
-                  <dl class="description">
-                    <dt><label for="description">Description</label></dt>
-                    <dd><textarea id="description" placeholder="Description"></textarea></dd>
-                  </dl>
+                <dl class="description">
+                  <dt><label for="description">Description</label></dt>
+                  <dd><textarea id="description" placeholder="Description"></textarea></dd>
+                </dl>
 
-                  <div class="buttons">
-                    <input class="submit" type="submit" value="Save">
-                    <input class="button complete" type="submit" value="Mark As Complete">
-                  </div>
-                </form>
-              </div>
+                <div class="buttons">
+                  <input class="submit" type="submit" value="Save">
+                  <input class="button complete" type="submit" value="Mark As Complete">
+                </div>
+              </form>
             </div>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item2">
-            <label for="item2">Item 2</label>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item3">
-            <label for="item3">Item 3</label>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item4">
-            <label for="item4">Item 4</label>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item5">
-            <label for="item5">Item 5</label>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item6">
-            <label for="item6">Item 6</label>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item7">
-            <label for="item7">Item 7</label>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item8">
-            <label for="item8">Item 8</label>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-        <tr>
-          <td>
-            <input type="checkbox" id="item9">
-            <label for="item9">Item 9</label>
-          </td>
-          <td><a href=""><img alt="" src="trash_icon.png"></a></td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item2">
+          <label for="item2">Item 2</label>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item3">
+          <label for="item3">Item 3</label>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item4">
+          <label for="item4">Item 4</label>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item5">
+          <label for="item5">Item 5</label>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item6">
+          <label for="item6">Item 6</label>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item7">
+          <label for="item7">Item 7</label>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item8">
+          <label for="item8">Item 8</label>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+      <dl>
+        <dt>
+          <input type="checkbox" id="item9">
+          <label for="item9">Item 9</label>
+        </dt>
+        <dd><a href=""><img alt="" src="images/trash_icon.png"></a></dd>
+      </dl>
+    </div>
   </main>
 </body>
 </html>
